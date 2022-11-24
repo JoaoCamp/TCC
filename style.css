@@ -1,0 +1,263 @@
+.splash {
+  position: fixed;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  color: white;
+  z-index: 200;
+  text-align: center;
+  line-height: 90vh;
+}
+
+.splash.display-none {
+  position: fixed;
+  opacity: 0;
+  transition: 2s;
+  z-index: -10;
+
+}
+
+@keyframes fadeIn {
+
+  to {
+
+    opacity: 1;
+  }
+}
+
+.fade-in {
+
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+
+}
+
+.btn-list {
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 20px;
+  border-radius: 30px;
+  width: 10em;
+  height: 3em;
+
+}
+
+
+
+.botao {
+
+  text-decoration: none;
+  color: black
+}
+
+
+.botao:hover {
+
+  color: #353333e0;
+
+}
+
+@import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css');
+
+#container-vertical {
+  font-family: arial;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background: #efefef;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#container-horizontal {
+  width: 100%;
+  padding: 10%;
+}
+
+#painel-botoes {
+  display: block;
+  flex-wrap: wrap;
+}
+
+.botao1 {
+  background: #f9f9f9;
+  width: 70%;
+  flex-grow: 1;
+  margin: 10px;
+  height: 20vh;
+  border-radius: 10px;
+  border-color: #0e0e0e;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+}
+
+.botao2 {
+  background: #f9f9f9;
+  width: 70%;
+  flex-grow: 1;
+  margin: 10px;
+  height: 20vh;
+  border-radius: 10px;
+  border-color: #0e0e0e;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.botao:hover {
+  box-shadow: 4px 6px 43px -10px #CCC !important;
+  position: relative;
+  bottom: -2px;
+
+  transition: 0.2s;
+}
+
+.icone-botao {
+  font-size: 7vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70%;
+}
+
+.nome-botao {
+  width: 100%;
+  text-align: center;
+  background: #ffffff;
+  padding: 5px 0px;
+  border-radius: inherit;
+  box-shadow: -1px -6px 7px -10px #696969;
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  justify-content: center;
+  font-size: 2vh;
+  text-transform: uppercase;
+  color: #151515;
+}
+
+.b1 {
+  color: #2ec908;
+}
+
+.b2 {
+  color: #ff0000;
+}
+
+
+.texto {
+
+  font-family: arial;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background: #efefef;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10%;
+  display: block;
+  flex-wrap: wrap;
+
+}
+
+/*Vorobev Sergei 2022*/
+
+#menu_toggle {
+  opacity: 0;
+  display: none;
+}
+.menu_btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu_btn > span,
+.menu_btn > span::before,
+.menu_btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2.5px;
+  background-color: #000000;
+}
+
+.menu_btn > span::before {
+  content: "";
+  top: -8px;
+}
+
+.menu_btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+.menu_box {
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  margin: 0;
+  padding: 23px;
+  list-style: none;
+  text-align: center;
+}
+
+.menu_item {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#menu_toggle:checked ~ .menu_btn > span {
+  transform: rotate(45deg);
+}
+
+#menu_toggle:checked ~ .menu_btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu_toggle:checked ~ .menu_btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu_toggle:checked ~ .menu_box {
+  visibility: visible;
+  left: 5%;
+}
+
+.menu_btn > span,
+.menu_btn > span::before,
+.menu_btn > span::after {
+  transition-duration: 0.3s;
+}
+.menu_box {
+  transition-duration: 0.3s;
+}
+.menu_item {
+  transition-duration: 0.3s;
+}
+
